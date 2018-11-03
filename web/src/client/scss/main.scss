@@ -1,0 +1,47 @@
+$main-background-color: #00a4e1;
+
+.container {
+  max-width: 700px;
+}
+
+.topbar {
+  padding: 20px;
+  background: $main-background-color;
+  color: #fff;
+  font-family: arial;
+
+  h1 {
+    text-transform: uppercase;
+  }
+
+  .topleft {
+    float: left;
+    color: #fff;
+    a, a:hover, a:active, a:visited {
+     color: #fff;
+   }
+  }
+}
+
+table {
+  width: 100%;
+  td,th {
+    border-bottom: 1px solid black;
+  }
+
+  tbody:nth-child(even) {background: #f5f5f5}
+  tbody:nth-child(odd) {background: #e5e5e5}
+
+  td.right, th.right {
+    text-align: right;
+  }
+
+  td.center, th.center {
+    text-align: center;
+  }
+}
+
+.dailypricescsv {
+  display: block;
+  margin: 0 auto;
+}

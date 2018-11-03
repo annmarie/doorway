@@ -1,0 +1,53 @@
+{
+  "name": "doorway_session",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js",
+    "build": "webpack-cli --config webpack.config.js --mode none",
+    "test": "NODE_ENV=test jest",
+    "start:dev": "pm2 delete web; pm2 start src/index.js --name web --watch --ignore-watch=\"app static\"",
+    "start:production": "pm2 delete web; pm2 start src/index.js --name web --ignore-watch=\"app static\""
+  },
+  "jest": {
+    "rootDir": "./test",
+    "verbose": true
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "latest",
+    "body-parser": "^1.18.2",
+    "connect-flash": "~0.1.1",
+    "connect-redis": "^3.3.3",
+    "cookie-parser": "~1.4.3",
+    "ejs": "~2.6.1",
+    "express": "~4.16.3",
+    "express-fileupload": "^0.4.0",
+    "express-redis-cache": "~1.1.1",
+    "express-session": "~1.15.6",
+    "json2csv": "^4.1.2",
+    "jsonwebtoken": "^8.1.1",
+    "lodash": "^4.17.4",
+    "morgan": "^1.9.0",
+    "node-fetch": "^2.0.0",
+    "passport": "~0.4.0",
+    "passport-local": "~1.0.0",
+    "redis": "^2.8.0",
+    "s3-proxy": "^1.1.1",
+    "serve-favicon": "^2.4.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "1.0.0",
+    "dotenv": "^6.0.0",
+    "jest": "^23.1.0",
+    "node-sass": "^4.5.3",
+    "prompt": "^1.0.0",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "webpack": "4.16.1",
+    "webpack-cli": "^3.0.8"
+  }
+}

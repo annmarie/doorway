@@ -1,0 +1,38 @@
+{
+  "name": "doorway_api",
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "NODE_ENV=test jest",
+    "start:dev": "pm2 delete api;pm2 start src/index.js --name api --watch",
+    "start:production": "pm2 delete api;pm2 start src/index.js --name api",
+    "create:user": "node bin/createUser.js"
+  },
+  "jest": {
+    "rootDir": "./test",
+    "verbose": true
+  },
+  "dependencies": {
+    "aws-sdk": "^2.238.1",
+    "bcrypt-nodejs": "latest",
+    "body-parser": "^1.18.2",
+    "connect-redis": "^3.3.3",
+    "express": "~4.16.3",
+    "express-fileupload": "^0.4.0",
+    "express-redis-cache": "~1.1.1",
+    "hashids": "^1.1.1",
+    "jsonwebtoken": "^8.1.1",
+    "lodash": "^4.17.4",
+    "morgan": "^1.9.0",
+    "mysql": "^2.13.0",
+    "node-fetch": "^2.0.0",
+    "redis": "^2.8.0",
+    "serve-favicon": "^2.4.3"
+  },
+  "devDependencies": {
+    "dotenv": "^6.0.0",
+    "jest": "^23.1.0",
+    "prompt": "^1.0.0"
+  }
+}

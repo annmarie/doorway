@@ -1,0 +1,15 @@
+  <div class="topbar text-center">
+    <h1>Doorway Portal</h1>
+    <div data-target="auth-display">
+      <!-- auth display -->
+      <div data-target="is-auth-display" class="hidden">
+        <p data-target="auth-user-email"><p>
+        <a href="/auth/weblogout"><button><span class="fa fa-user"></span> Logout</button></a>
+        <input data-target="authtoken" type="hidden" value="">
+      </div>
+      <!-- notauth display -->
+       <div data-target="not-auth-display" class="hidden">
+        <a href="/auth/weblogin"><button><span class="fa fa-user"></span> Login</button></a>
+       </div>
+    </div>
+  </div>

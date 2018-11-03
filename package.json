@@ -1,0 +1,11 @@
+{
+  "name": "doorway",
+  "license": "MIT",
+  "scripts": {
+    "start:dev": "bash bin/build_and_start_dev.sh"
+  },
+  "devDependencies": {
+    "dotenv": "^6.0.0",
+    "prompt": "^1.0.0"
+  }
+}
